@@ -1,0 +1,1 @@
+# parkineasy-gconfig
