@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/"
+            fx:controller="br.com.parkineasy.view.controller.ClienteLocalVagaController">
+    <top>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="154.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/selecao-de-vaga.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="327.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btVoltarLocalVaga" layoutX="486.0" layoutY="411.0" mnemonicParsing="false"
+                        onAction="#pressBack" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #2c344c;"
+                        text="Voltar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <TableView fx:id="tableLocalVaga" layoutY="-1.0" onMouseClicked="#selectRow" prefHeight="410.0"
+                           prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="colCodigoLocalVaga" editable="false" prefWidth="199.0" sortable="false"
+                                     text="Código da Vaga"/>
+                        <TableColumn fx:id="colSituacaoLocalVaga" editable="false" prefWidth="199.0" sortable="false"
+                                     text="Situação da Vaga"/>
+                        <TableColumn fx:id="colTipoLocalVaga" editable="false" prefWidth="199.0" sortable="false"
+                                     text="Tipo da Vaga"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

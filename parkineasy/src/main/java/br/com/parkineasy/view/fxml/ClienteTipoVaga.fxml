@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0"
+            prefWidth="407.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="br.com.parkineasy.view.controller.ClienteTicketController">
+    <top>
+        <AnchorPane prefHeight="159.0" prefWidth="407.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="159.0" fitWidth="407.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/tela-horizontal-tipo-vaga.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="197.0" prefWidth="407.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="72.0" fitWidth="81.0" layoutX="20.0" layoutY="21.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/comum.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="68.0" fitWidth="83.0" layoutX="168.0" layoutY="23.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/idoso.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="306.0" layoutY="23.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/deficiente.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="btComumTipoVaga" layoutX="16.0" layoutY="128.0" mnemonicParsing="false"
+                        onAction="#pressButtonTipo" prefHeight="25.0" prefWidth="80.0"
+                        style="-fx-background-color: #2c344c;" text="COMUM" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btIdosoTipoVaga" layoutX="167.0" layoutY="128.0" mnemonicParsing="false"
+                        onAction="#pressButtonTipo" prefHeight="25.0" prefWidth="70.0"
+                        style="-fx-background-color: #2c344c;" text="IDOSO" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btDeficienteTipoVaga" layoutX="295.0" layoutY="128.0" mnemonicParsing="false"
+                        onAction="#pressButtonTipo" prefHeight="25.0" prefWidth="91.0"
+                        style="-fx-background-color: #2c344c;" text="DEFICIENTE" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Separator layoutX="266.0" layoutY="2.0" orientation="VERTICAL" prefHeight="169.0" prefWidth="7.0"/>
+                <Separator layoutX="129.0" layoutY="3.0" orientation="VERTICAL" prefHeight="168.0" prefWidth="6.0"/>
+                <Separator layoutY="170.0" prefHeight="4.0" prefWidth="407.0"/>
+                <Button fx:id="btVoltarTipoVaga" layoutX="330.0" layoutY="179.0" mnemonicParsing="false"
+                        onAction="#pressButtonVoltarTipo" prefHeight="27.0" prefWidth="74.0"
+                        style="-fx-background-color: #2c344c;" text="Voltar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

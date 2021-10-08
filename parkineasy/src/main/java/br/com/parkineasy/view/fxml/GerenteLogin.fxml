@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/"
+            fx:controller="br.com.parkineasy.view.controller.GerenteController">
+    <left>
+        <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="407.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/tela-de-login.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: 2c344c;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="26.0" layoutY="121.0" text="Username">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="tfUsernameLoginGerente" layoutX="95.0" layoutY="118.0" prefHeight="26.0"
+                           prefWidth="173.0"/>
+                <PasswordField fx:id="tfPasswordLoginGerente" layoutX="95.0" layoutY="157.0" prefHeight="26.0"
+                               prefWidth="173.0"/>
+                <Label layoutX="26.0" layoutY="162.0" text="Password">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="btLoginGerente" layoutX="26.0" layoutY="237.0" mnemonicParsing="false"
+                        onAction="#pressButtonConfirmLogin" prefHeight="32.0" prefWidth="240.0"
+                        style="-fx-background-color: #2c344c;" text="Login" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btCancelLoginGerente" layoutX="26.0" layoutY="286.0" mnemonicParsing="false"
+                        onAction="#pressButtonCancelLogin" prefHeight="32.0" prefWidth="240.0"
+                        style="-fx-background-color: #2c344c;" text="Cancelar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="92.0" fitWidth="85.0" layoutX="104.0" layoutY="14.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/lockicon.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

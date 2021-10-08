@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx"
+            fx:controller="br.com.parkineasy.view.controller.GerenteController">
+    <top>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="154.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/brand-barra-horizontal-gerente.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btGerarRelatorioPainel" layoutX="200.0" layoutY="40.0" mnemonicParsing="false"
+                        onAction="#pressButtonMenuGerente" prefHeight="32.0" prefWidth="200.0"
+                        style="-fx-background-color: #2c344c;" text="Gerar Relatório" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btConsultarVagasPainel" layoutX="200.0" layoutY="97.0" mnemonicParsing="false"
+                        onAction="#pressButtonMenuGerente" prefHeight="32.0" prefWidth="200.0"
+                        style="-fx-background-color: #2c344c;" text="Consultar Vagas" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btReimprimirTicketPainel" layoutX="200.0" layoutY="154.0" mnemonicParsing="false"
+                        onAction="#pressButtonMenuGerente" prefHeight="32.0" prefWidth="200.0"
+                        style="-fx-background-color: #2c344c;" text="Reimprimir Ticket" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btSairPainel" layoutX="516.0" layoutY="207.0" mnemonicParsing="false"
+                        onAction="#pressButtonMenuGerente" prefWidth="70.0" style="-fx-background-color: #2c344c;"
+                        text="Sair" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

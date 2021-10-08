@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0"
+            prefWidth="950.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="br.com.parkineasy.view.controller.GerenteGerarRelatorioController">
+    <top>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="157.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/emissao-relatorio-horizontal.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableRelatorio" prefHeight="547.0" prefWidth="950.0">
+                    <columns>
+                        <TableColumn fx:id="colTicketRelatorio" prefWidth="64.0" text="Ticket"/>
+                        <TableColumn fx:id="colVagaRelatorio" prefWidth="55.0" text="Vaga"/>
+                        <TableColumn fx:id="colComprovanteRelatorio" minWidth="0.0" prefWidth="91.0"
+                                     text="Comprovante"/>
+                        <TableColumn fx:id="colDataEntradaRelatorio" minWidth="0.0" prefWidth="81.0"
+                                     text="Data Entrada"/>
+                        <TableColumn fx:id="colHorarioEntradaRelatorio" prefWidth="102.0" text="Horário Entrada"/>
+                        <TableColumn fx:id="colDataPagamentoRelatorio" minWidth="0.0" prefWidth="109.0"
+                                     text="Data Pagamento"/>
+                        <TableColumn fx:id="colHorarioPagamentoRelatorio" prefWidth="118.0" text="Horário Pagamento"/>
+                        <TableColumn fx:id="colDataSaidaRelatorio" minWidth="0.0" text="Data Saída"/>
+                        <TableColumn fx:id="colHorarioSaidaRelatorio" prefWidth="90.0" text="Horário Saída"/>
+                        <TableColumn fx:id="colTempoRelatorio" minWidth="0.0" prefWidth="98.0" text="Tempo Utilizado"/>
+                        <TableColumn fx:id="colValorRelatorio" minWidth="0.0" prefWidth="61.0" text="Valor"/>
+                    </columns>
+                </TableView>
+                <Button fx:id="btVoltarEmissaoRelatorio" layoutX="14.0" layoutY="550.0" mnemonicParsing="false"
+                        onAction="#pressButtonVoltarEmissaoRelatorio" prefHeight="27.0" prefWidth="94.0"
+                        style="-fx-background-color: #2c344c;" text="Voltar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Label layoutX="722.0" layoutY="556.0" text="Valor Total Movimentado: R$">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="lbValorTotalRelatorio" layoutX="903.0" layoutY="556.0" prefHeight="20.0" prefWidth="45.0">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

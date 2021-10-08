@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx"
+            fx:controller="br.com.parkineasy.view.controller.TelaInicialController">
+    <left>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="228.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="400.0" fitWidth="228.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/brand-tela-lateral-sem-nome.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="304.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btClienteTelaInicial" layoutX="48.0" layoutY="268.0" mnemonicParsing="false"
+                        onAction="#pressButtonCli" prefHeight="27.0" prefWidth="197.0"
+                        style="-fx-background-color: #2c344c;" text="Cliente" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btGerenteTelaInicial" layoutX="48.0" layoutY="325.0" mnemonicParsing="false"
+                        onAction="#pressButtonGer" prefHeight="27.0" prefWidth="197.0"
+                        style="-fx-background-color: #2c344c;" text="Gerente" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="297.0" fitWidth="185.0" layoutX="63.0" layoutY="-35.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/selecao-de-modulo.png"/>
+                    </image>
+                </ImageView>
+                <Separator layoutY="309.0" prefHeight="3.0" prefWidth="292.0"/>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="paneEmitirTicket" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" onMouseEntered="#fillTicketField" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="br.com.parkineasy.view.controller.ClienteTicketController">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btConfirmarEmitirTicket" layoutX="200.0" layoutY="175.0" mnemonicParsing="false"
+                        onAction="#pressButtonConfirmarTicket" prefHeight="32.0" prefWidth="200.0"
+                        style="-fx-background-color: #2c344c;" text="Confirmar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <TextArea fx:id="taEmitirTicket" editable="false" layoutX="200.0" layoutY="6.0" prefHeight="163.0"
+                          prefWidth="200.0"/>
+                <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="385.0" layoutY="143.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/parkicon.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="154.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/emissao-de-ticket.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

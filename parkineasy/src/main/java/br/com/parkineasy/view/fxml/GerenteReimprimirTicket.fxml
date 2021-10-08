@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx"
+            fx:controller="br.com.parkineasy.view.controller.GerenteController">
+    <left>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="228.0"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="400.0" fitWidth="228.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/brand-tela-lateral-sem-nome.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="304.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btConfirmarReimprimirTicket" layoutX="86.0" layoutY="283.0" mnemonicParsing="false"
+                        onAction="#pressButtonReimprimirTicket" prefHeight="27.0" prefWidth="110.0"
+                        style="-fx-background-color: #2c344c;" text="Reimprimir" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="btVoltarReimprimirTicket" layoutX="221.0" layoutY="359.0" mnemonicParsing="false"
+                        onAction="#pressButtonReimprimirTicket" prefHeight="27.0" prefWidth="57.0"
+                        style="-fx-background-color: #2c344c;" text="Voltar" textFill="WHITE">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="179.0" fitWidth="302.0" layoutX="-10.0" layoutY="7.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/reimpressao-de-ticket.png"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="tfCodigoReimprimirTicket" layoutX="86.0" layoutY="225.0" prefHeight="27.0"
+                           prefWidth="110.0" promptText="Código da Vaga">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </TextField>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
