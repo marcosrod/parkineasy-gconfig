@@ -1,0 +1,8 @@
+language: java
+jdk: openjdk11
+script: ./mvnw clean test package
+notifications:
+  email:
+    - eugeniojava@outlook.com
+    - marcos-rodrigo05@hotmail.com
+    - bmsilva99@gmail.com
