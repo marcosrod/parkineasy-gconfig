@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0"
-            prefWidth="407.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
+<BorderPane xmlns:fx="http://javafx.com/fxml/" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="370.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/"
             fx:controller="br.com.parkineasy.view.controller.ClienteTicketController">
     <top>
         <AnchorPane prefHeight="159.0" prefWidth="407.0" BorderPane.alignment="CENTER">

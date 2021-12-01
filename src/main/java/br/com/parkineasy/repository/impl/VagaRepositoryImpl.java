@@ -4,7 +4,6 @@ import br.com.parkineasy.model.Vaga;
 import br.com.parkineasy.model.enums.TipoVaga;
 import br.com.parkineasy.repository.ConsultaBancoDeDados;
 import br.com.parkineasy.repository.VagaRepository;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

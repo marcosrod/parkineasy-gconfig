@@ -3,14 +3,13 @@ package br.com.parkineasy.view.controller;
 import br.com.parkineasy.App;
 import br.com.parkineasy.model.Entrada;
 import br.com.parkineasy.repository.impl.ReservaRepositoryImpl;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Control;
 import javafx.scene.control.TextArea;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Paths;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
@@ -27,15 +26,16 @@ public class ClienteTicketController {
             case "btTicketMenuCliente":
                 App.infoBox("Opção de Emissão de Ticket Selecionada!", "Menu do Cliente", null);
                 URL url =
-                Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy\\view\\fxml\\ClienteTipoVaga" +
-                        ".fxml").toUri().toURL();
+                        Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy\\view\\fxml" +
+                                "\\ClienteTipoVaga" +
+                                ".fxml").toUri().toURL();
                 App.nextScene("Seleção do Tipo de Vaga", 407, 370, url, event);
                 break;
             case "btPagamentoMenuCliente":
                 App.infoBox("Opção de Efetuar Pagamento Selecionada", "Menu do Cliente", null);
                 url = Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy\\view\\fxml" +
                         "\\ClienteInserirTicketPagamento" +
-                ".fxml").toUri().toURL();
+                        ".fxml").toUri().toURL();
                 App.nextScene("Inserção de Ticket", 520, 400, url, event);
                 break;
             case "btVoltarMenuCliente":

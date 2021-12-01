@@ -4,17 +4,16 @@ import br.com.parkineasy.App;
 import br.com.parkineasy.model.ComprovantePagamento;
 import br.com.parkineasy.repository.impl.PagamentoRepositoryImpl;
 import br.com.parkineasy.service.impl.PagamentoServiceImpl;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Control;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Paths;
-import java.util.regex.Pattern;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
@@ -107,7 +106,8 @@ public class ClientePagamentoController {
         } else if (pagamentoRepository.conferirComprovanteDePagamento(Integer.parseInt(tfCodigoSaida.getText()))) {
             App.infoBox("Saída Confirmada - Agradecemos Pela Confiança!", "Inserção de Comprovante", null);
             URL url =
-            Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy\\view\\fxml\\ClienteMenu.fxml").toUri().toURL();
+                    Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy\\view\\fxml\\ClienteMenu" +
+                            ".fxml").toUri().toURL();
             App.nextScene("Menu do Cliente", 407, 375, url, event);
         } else {
             App.infoBox("O Comprovante Inserido É Inválido!", "Inserção de Comprovante", null);

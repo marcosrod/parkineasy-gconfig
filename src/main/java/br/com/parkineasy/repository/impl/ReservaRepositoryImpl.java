@@ -3,7 +3,6 @@ package br.com.parkineasy.repository.impl;
 import br.com.parkineasy.model.Entrada;
 import br.com.parkineasy.repository.ConsultaBancoDeDados;
 import br.com.parkineasy.repository.ReservaRepository;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;

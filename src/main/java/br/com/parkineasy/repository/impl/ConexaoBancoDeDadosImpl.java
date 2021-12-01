@@ -1,7 +1,6 @@
 package br.com.parkineasy.repository.impl;
 
 import br.com.parkineasy.repository.ConexaoBancoDeDados;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

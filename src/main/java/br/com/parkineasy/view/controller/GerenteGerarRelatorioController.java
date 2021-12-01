@@ -3,6 +3,15 @@ package br.com.parkineasy.view.controller;
 import br.com.parkineasy.App;
 import br.com.parkineasy.model.Relatorio;
 import br.com.parkineasy.repository.impl.GerenteRepositoryImpl;
+import java.math.BigDecimal;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.YearMonth;
+import java.util.List;
+import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,16 +22,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.math.BigDecimal;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.YearMonth;
-import java.util.List;
-import java.util.ResourceBundle;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 

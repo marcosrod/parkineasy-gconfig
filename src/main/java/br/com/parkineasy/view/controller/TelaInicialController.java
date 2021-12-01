@@ -1,11 +1,10 @@
 package br.com.parkineasy.view.controller;
 
 import br.com.parkineasy.App;
-import javafx.event.ActionEvent;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
+import javafx.event.ActionEvent;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 

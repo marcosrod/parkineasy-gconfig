@@ -3,17 +3,16 @@ package br.com.parkineasy.view.controller;
 import br.com.parkineasy.App;
 import br.com.parkineasy.model.Entrada;
 import br.com.parkineasy.repository.impl.GerenteRepositoryImpl;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Control;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.time.YearMonth;
 import java.util.regex.Pattern;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Control;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 

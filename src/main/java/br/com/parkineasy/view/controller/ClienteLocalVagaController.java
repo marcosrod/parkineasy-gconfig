@@ -6,6 +6,12 @@ import br.com.parkineasy.model.enums.TipoVaga;
 import br.com.parkineasy.repository.impl.ReservaRepositoryImpl;
 import br.com.parkineasy.repository.impl.VagaRepositoryImpl;
 import br.com.parkineasy.view.model.VagaTableRow;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,13 +26,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 

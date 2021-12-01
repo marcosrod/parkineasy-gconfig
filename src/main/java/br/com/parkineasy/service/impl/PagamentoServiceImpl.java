@@ -5,13 +5,11 @@ import br.com.parkineasy.repository.UsoRepository;
 import br.com.parkineasy.repository.impl.PagamentoRepositoryImpl;
 import br.com.parkineasy.repository.impl.UsoRepositoryImpl;
 import br.com.parkineasy.service.PagamentoService;
-
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.time.LocalTime;
 
 public class PagamentoServiceImpl implements PagamentoService {
-
     private final UsoRepository usoRepository = new UsoRepositoryImpl();
     private final PagamentoRepository pagamentoRepository = new PagamentoRepositoryImpl();
     private final BigDecimal VALOR_HORA = new BigDecimal("5.0");
@@ -29,6 +27,4 @@ public class PagamentoServiceImpl implements PagamentoService {
 
         return pagamentoRepository.salvar(codigoTicket, metodoPagamento, valorTotal);
     }
-
 }
-
