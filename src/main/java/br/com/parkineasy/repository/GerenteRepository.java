@@ -7,7 +7,6 @@ import java.time.YearMonth;
 import java.util.List;
 
 public interface GerenteRepository {
-
     Boolean validarGerente(String username, String senha) throws SQLException;
 
     List<Relatorio> gerarRelatorio(YearMonth mesAno);

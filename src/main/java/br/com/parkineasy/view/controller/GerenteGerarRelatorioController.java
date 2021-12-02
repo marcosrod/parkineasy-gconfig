@@ -26,33 +26,46 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
 public class GerenteGerarRelatorioController implements Initializable {
-
     private static YearMonth mesAno;
+
     GerenteRepositoryImpl gerenteRepository = new GerenteRepositoryImpl();
+
     @FXML
     private TableView<Relatorio> tableRelatorio;
+
     @FXML
     private TableColumn<Relatorio, Integer> colTicketRelatorio;
+
     @FXML
     private TableColumn<Relatorio, String> colVagaRelatorio;
+
     @FXML
     private TableColumn<Relatorio, Integer> colComprovanteRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalDate> colDataEntradaRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalTime> colHorarioEntradaRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalDate> colDataSaidaRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalTime> colHorarioSaidaRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalDate> colDataPagamentoRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalTime> colHorarioPagamentoRelatorio;
+
     @FXML
     private TableColumn<Relatorio, LocalTime> colTempoRelatorio;
+
     @FXML
     private TableColumn<Relatorio, BigDecimal> colValorRelatorio;
+
     @FXML
     private Label lbValorTotalRelatorio;
 
@@ -62,10 +75,7 @@ public class GerenteGerarRelatorioController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         ObservableList<Relatorio> oblist = FXCollections.observableArrayList(gerenteRepository.gerarRelatorio(mesAno));
-
-
         colTicketRelatorio.setCellValueFactory(
                 new PropertyValueFactory<>("codigoTicket"));
         colVagaRelatorio.setCellValueFactory(
@@ -88,16 +98,13 @@ public class GerenteGerarRelatorioController implements Initializable {
                 new PropertyValueFactory<>("totalHoras"));
         colValorRelatorio.setCellValueFactory(
                 new PropertyValueFactory<>("valorPago"));
-
         tableRelatorio.setItems(oblist);
-
         List<Relatorio> listaRelatorios = gerenteRepository.gerarRelatorio(mesAno);
         BigDecimal soma = BigDecimal.ZERO;
         for (int i = 0; i < listaRelatorios.size(); i++) {
             soma = soma.add(listaRelatorios.get(i).getValorPago());
         }
         lbValorTotalRelatorio.setText(soma.toString());
-
     }
 
     public void pressButtonVoltarEmissaoRelatorio(ActionEvent event) throws MalformedURLException {
@@ -107,6 +114,4 @@ public class GerenteGerarRelatorioController implements Initializable {
             App.nextScene("Geração de Relatório", 520, 400, url, event);
         }
     }
-
-
 }

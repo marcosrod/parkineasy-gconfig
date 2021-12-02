@@ -13,9 +13,7 @@ import javafx.scene.control.TextArea;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
-
 public class ClienteTicketController {
-
     ReservaRepositoryImpl reservaRepository = new ReservaRepositoryImpl();
 
     @FXML

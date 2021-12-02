@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Entrada {
-
     private Integer codigoTicket;
     private LocalDateTime dataHoraEntrada;
     private String codigoVaga;
@@ -45,4 +44,3 @@ public class Entrada {
                 "Horário de Entrada: " + LocalTime.from(dataHoraEntrada);
     }
 }
-

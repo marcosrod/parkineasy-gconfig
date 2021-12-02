@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Relatorio {
-
     private Integer codigoTicket;
     private String codigoVaga;
     private Integer codigoComprovante;
