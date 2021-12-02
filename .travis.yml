@@ -1,5 +1,6 @@
 language: java
-jdk: openjdk11
+jdk: 
+  - openjdk11
 script: ./mvnw clean test package
 notifications:
   email:
