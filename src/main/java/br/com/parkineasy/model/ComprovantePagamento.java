@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class ComprovantePagamento {
-
     private Integer codigoTicket;
     private LocalDateTime dataHoraSaida;
     private BigDecimal valorPago;

@@ -4,7 +4,6 @@ import br.com.parkineasy.model.ComprovantePagamento;
 import java.math.BigDecimal;
 
 public interface PagamentoRepository {
-
     Boolean salvar(Integer codigoTicket, Integer metodoPagamento, BigDecimal valorTotal);
 
     ComprovantePagamento mostrarComprovante(Integer codigoTicket);

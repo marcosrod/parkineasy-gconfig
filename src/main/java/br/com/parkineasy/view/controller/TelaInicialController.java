@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
 public class TelaInicialController {
-
     public void pressButtonCli(ActionEvent event) throws MalformedURLException {
         App.infoBox("Módulo de Cliente Selecionado Com Sucesso!", "Seleção de Módulo", null);
         URL url =
@@ -23,5 +22,4 @@ public class TelaInicialController {
                 ".fxml").toUri().toURL();
         App.nextScene("Login da Gerência", 520, 400, url, event);
     }
-
 }

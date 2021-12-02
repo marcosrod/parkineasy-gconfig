@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConexaoBancoDeDadosImpl implements ConexaoBancoDeDados {
-
-
     private static ConexaoBancoDeDadosImpl instancia;
     private Connection connection;
     private Statement statement;

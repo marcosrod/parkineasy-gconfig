@@ -24,37 +24,33 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
 public class GerenteConsultarVagasController implements Initializable {
-
     VagaRepositoryImpl vagaRepository = new VagaRepositoryImpl();
-
 
     @FXML
     private TableView<VagaTableRow> tableConsultarVagas;
+
     @FXML
     private TableColumn<VagaTableRow, String> colAConsultarVagas;
+
     @FXML
     private TableColumn<VagaTableRow, String> colBConsultarVagas;
+
     @FXML
     private TableColumn<VagaTableRow, TipoVaga> colCConsultarVagas;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         List<Vaga> vagas = vagaRepository.recuperarTodas();
         List<VagaTableRow> vagaTableRowList = new ArrayList<>();
         vagas.forEach(v -> vagaTableRowList.add(new VagaTableRow(v)));
-
         ObservableList<VagaTableRow> oblist = FXCollections.observableArrayList(vagaTableRowList);
-
         colAConsultarVagas.setCellValueFactory(
                 new PropertyValueFactory<>("codigoVaga"));
         colBConsultarVagas.setCellValueFactory(
                 new PropertyValueFactory<>("situacaoVaga"));
         colCConsultarVagas.setCellValueFactory(
                 new PropertyValueFactory<>("tipoVaga"));
-
         tableConsultarVagas.setItems(oblist);
-
     }
 
 

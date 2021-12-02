@@ -30,17 +30,23 @@ import javafx.stage.Stage;
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
 public class ClienteLocalVagaController implements Initializable {
-
     static VagaRepositoryImpl vagaRepository = new VagaRepositoryImpl();
+
     private static Integer tipo;
+
     private static String codigo;
+
     ReservaRepositoryImpl reservaRepository = new ReservaRepositoryImpl();
+
     @FXML
     private TableView<VagaTableRow> tableLocalVaga;
+
     @FXML
     private TableColumn<VagaTableRow, String> colCodigoLocalVaga;
+
     @FXML
     private TableColumn<VagaTableRow, String> colSituacaoLocalVaga;
+
     @FXML
     private TableColumn<VagaTableRow, TipoVaga> colTipoLocalVaga;
 
@@ -50,29 +56,22 @@ public class ClienteLocalVagaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         List<Vaga> vagas = vagaRepository.recuperarTodasPorTipoESituacaoLivre(tipo);
         List<VagaTableRow> vagaTableRowList = new ArrayList<>();
         vagas.forEach(v -> vagaTableRowList.add(new VagaTableRow(v)));
-
         ObservableList<VagaTableRow> listaV = FXCollections.observableArrayList(vagaTableRowList);
-
         colCodigoLocalVaga.setCellValueFactory(
                 new PropertyValueFactory<>("codigoVaga"));
         colSituacaoLocalVaga.setCellValueFactory(
                 new PropertyValueFactory<>("situacaoVaga"));
         colTipoLocalVaga.setCellValueFactory(
                 new PropertyValueFactory<>("tipoVaga"));
-
         tableLocalVaga.setItems(listaV);
-
         tableLocalVaga.setOnMousePressed(mouseEvent -> {
             codigo = tableLocalVaga.getSelectionModel().getSelectedItem().getCodigoVaga();
             reservaRepository.salvar(codigo);
         });
-
     }
-
 
     public void pressBack(ActionEvent event) throws MalformedURLException {
         URL url =

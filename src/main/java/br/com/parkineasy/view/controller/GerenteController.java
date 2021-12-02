@@ -17,17 +17,22 @@ import javafx.scene.control.TextField;
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
 public class GerenteController {
-
     private static String tfReimprimirTicket;
+
     GerenteRepositoryImpl gerenteRepository = new GerenteRepositoryImpl();
+
     @FXML
     private TextField tfUsernameLoginGerente;
+
     @FXML
     private TextField tfPasswordLoginGerente;
+
     @FXML
     private TextField tfCodigoReimprimirTicket;
+
     @FXML
     private TextArea taReimprimirTicket;
+
     @FXML
     private TextField tfMesAnoRelatorio;
 
@@ -41,7 +46,6 @@ public class GerenteController {
     public void pressButtonConfirmLogin(ActionEvent event) throws MalformedURLException {
         if (tfUsernameLoginGerente.getText().equals("") || tfPasswordLoginGerente.getText().equals("")) {
             App.infoBox("Todos os campos devem ser preenchidos!", "Login de Gerente", null);
-
         } else if (gerenteRepository.validarGerente(tfUsernameLoginGerente.getText(),
                 tfPasswordLoginGerente.getText())) {
             App.infoBox("Gerente Autenticado Com Sucesso!", "Login de Gerente", null);
@@ -54,7 +58,6 @@ public class GerenteController {
             tfPasswordLoginGerente.clear();
             tfUsernameLoginGerente.requestFocus();
         }
-
     }
 
     public void pressButtonMenuGerente(ActionEvent event) throws MalformedURLException {
@@ -103,10 +106,8 @@ public class GerenteController {
                     App.infoBox("A Data Alvo Inserida É Inválida! Utilize o Formato Requisitado. Exemplo: 2021-05",
                             "Geração de Relatório", null);
                 }
-
                 break;
             }
-
             case "btVoltarGerarRelatorio": {
                 URL url = Paths.get(PARKINEASY_FOLDER + "\\src\\main\\java\\br\\com\\parkineasy" +
                         "\\view\\fxml\\GerentePainelControle.fxml").toUri().toURL();
@@ -153,6 +154,4 @@ public class GerenteController {
                 "\\view\\fxml\\GerenteReimprimirTicket.fxml").toUri().toURL();
         App.nextScene("Reimpressão de Ticket", 520, 400, url, event);
     }
-
-
 }

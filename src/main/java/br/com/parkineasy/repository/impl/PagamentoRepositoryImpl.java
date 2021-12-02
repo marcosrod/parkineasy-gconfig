@@ -11,7 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class PagamentoRepositoryImpl implements PagamentoRepository {
-
     private final ConsultaBancoDeDados consultaBancoDeDados = new ConsultaBancoDeDadosImpl();
 
     @Override
@@ -22,7 +21,6 @@ public class PagamentoRepositoryImpl implements PagamentoRepository {
         Integer consultasComSucesso = 0;
         Random random = new Random();
         int comprovante = random.nextInt(1000);
-
         consultasComSucesso = consultaBancoDeDados.executarAtualizacao(
                 "UPDATE pagamento SET data_hora_pagamento = '" + dataHoraFormatada + "'," +
                         " met_pagamento = " + metodoPagamento + "" +
@@ -34,7 +32,6 @@ public class PagamentoRepositoryImpl implements PagamentoRepository {
                         "id_reserva = " + codigoTicket);
         consultasComSucesso += consultaBancoDeDados.executarAtualizacao(
                 "UPDATE pagamento SET comprovante_pagamento = " + comprovante + " where id_pagamento = " + codigoTicket);
-
         return consultasComSucesso.equals(consultasASeremRealizadas);
     }
 
@@ -52,15 +49,11 @@ public class PagamentoRepositoryImpl implements PagamentoRepository {
                 comprovante.setValorPago(resultSet.getBigDecimal("valor_pago"));
                 comprovante.setDataHoraSaida(
                         LocalDateTime.parse(resultSet.getString("data_hora_pagamento"), dataHoraFormato));
-
                 return comprovante;
-
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
-
-
         return null;
     }
 
@@ -68,7 +61,6 @@ public class PagamentoRepositoryImpl implements PagamentoRepository {
     public Boolean conferirComprovanteDePagamento(Integer comprovanteSaida) {
         ResultSet resultSet = consultaBancoDeDados.executarConsulta(
                 "SELECT * FROM pagamento WHERE comprovante_pagamento = " + comprovanteSaida);
-
         try {
             if (resultSet.next()) {
                 Integer result = consultaBancoDeDados.executarAtualizacao(
@@ -79,7 +71,6 @@ public class PagamentoRepositoryImpl implements PagamentoRepository {
                 result += consultaBancoDeDados.executarAtualizacao("UPDATE uso set data_hora_saida = now() where" +
                         " id_pagamento = (select id_pagamento from pagamento " +
                         " where comprovante_pagamento = " + comprovanteSaida + ");");
-
                 return result == 2;
             }
         } catch (SQLException sqlException) {

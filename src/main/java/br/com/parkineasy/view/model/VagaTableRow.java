@@ -4,7 +4,6 @@ import br.com.parkineasy.model.Vaga;
 import br.com.parkineasy.model.enums.TipoVaga;
 
 public class VagaTableRow {
-
     private String codigoVaga;
     private String situacaoVaga;
     private TipoVaga tipoVaga;

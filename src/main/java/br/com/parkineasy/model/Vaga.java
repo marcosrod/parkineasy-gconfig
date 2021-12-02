@@ -3,7 +3,6 @@ package br.com.parkineasy.model;
 import br.com.parkineasy.model.enums.TipoVaga;
 
 public class Vaga {
-
     private String codigoVaga;
     private Integer situacaoVaga;
     private TipoVaga tipoVaga;

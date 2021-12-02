@@ -17,16 +17,19 @@ import javafx.scene.input.KeyEvent;
 
 import static br.com.parkineasy.App.PARKINEASY_FOLDER;
 
-
 public class ClientePagamentoController {
-
     private static Integer codigoTicket;
+
     PagamentoServiceImpl pagamentoService = new PagamentoServiceImpl();
+
     PagamentoRepositoryImpl pagamentoRepository = new PagamentoRepositoryImpl();
+
     @FXML
     private TextField tfCodigoInserirTicket;
+
     @FXML
     private TextField tfCodigoSaida;
+
     @FXML
     private TextArea taEmitirComprovante;
 
@@ -114,7 +117,6 @@ public class ClientePagamentoController {
             tfCodigoSaida.clear();
             tfCodigoSaida.requestFocus();
         }
-
     }
 
     public void pressBackSaida(ActionEvent event) throws MalformedURLException {
